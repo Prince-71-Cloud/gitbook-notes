@@ -63,7 +63,7 @@ You can see few of the keywords are new and unique. We can curate one js words l
 5. We can use these same keywords on the IPs which you will get from the shodan
 
 {% code overflow="wrap" %}
-```
+```shellscript
 ssl.cert.subject.cn:*.target.com + 200
 ```
 {% endcode %}
@@ -80,9 +80,7 @@ dirsearch -u http://ip/ -w JSFuzz.txt --full-url
 
 {% code overflow="wrap" %}
 ```bash
-curl -s https://app.site.com/config.js | \
-grep -E “environment: ‘Production’|storageUrl: ‘https://buildxact.blob.core.windows.net/'|googleApiKey: ‘|appInsightsInstrumentationKey: ‘|globalApiEndpoint: ‘|streamChatApiKey: ‘|auth0ClientId: ‘|auth0Domain: ‘|flatfileApiKey: ‘|webSpellCheckerServiceId: ‘|webSpellCheckerServiceUrl: ‘|clientPortalUrl: ‘|appVersion: ‘|appVersionDate: ‘|appDomainUrl: ‘|oneBuildKey: ‘|flatfilePlatformPublishableKey: ‘|flatfilePlatformEnvironmentId: ‘“ | \
-sed “s/.*’\(.*\)’.*/\1/”
+curl -s https://app.site.com/config.js | grep -E "environment: 'Production'|storageUrl: 'https://buildxact.blob.core.windows.net/'|googleApiKey: '|appInsightsInstrumentationKey: '|globalApiEndpoint: '|streamChatApiKey: '|auth0ClientId: '|auth0Domain: '|flatfileApiKey: '|webSpellCheckerServiceId: '|webSpellCheckerServiceUrl: '|clientPortalUrl: '|appVersion: '|appVersionDate: '|appDomainUrl: '|oneBuildKey: '|flatfilePlatformPublishableKey: '|flatfilePlatformEnvironmentId: '" | sed "s/.*’\(.*\)’.*/\1/"
 ```
 {% endcode %}
 
