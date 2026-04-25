@@ -1,4 +1,4 @@
-# Homoglyph Attack
+# 👀 Homoglyph Attack
 
 #### 1. Change victim’s password using IDN Homograph Attack
 
