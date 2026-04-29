@@ -1,4 +1,4 @@
 # Table of contents
 
 * [Js Hunting Methodology](README.md)
-* [👀 Homoglyph Attack](homoglyph-attack.md)
+* [👀 Homoglyph Attack](bug-hunting-1.md)
