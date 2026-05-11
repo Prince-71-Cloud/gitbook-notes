@@ -3,6 +3,7 @@
 ## Recon <a href="#bug-hunting-recon" id="bug-hunting-recon"></a>
 
 * [Google Dorks & OAuth Recon Cheatsheet](README.md)
+* [Subdomain Enumeration Workflow](bug-hunting-recon/subdomain-enumeration-workflow.md)
 
 ***
 
