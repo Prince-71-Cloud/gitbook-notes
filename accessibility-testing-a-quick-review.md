@@ -60,4 +60,4 @@ description: https://www.youtube.com/watch?v=5lzAj1ahRSI
 * Running accessibility audits on sample pages during automated tests.
 * Automatically failing tests when accessibility violations are detected, prompting fixes before deployment. This approach fosters continuous accessibility compliance and prevents issues from reappearing unnoticed.
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/summary.png" alt=""><figcaption></figcaption></figure>
