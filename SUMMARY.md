@@ -1,6 +1,7 @@
 # Table of contents
 
 * [👨‍💻 Git Basic to Advance](README.md)
+* [🍕 Automation with Playwright](automation-with-playwright.md)
 * [🍳 Accessibility Testing (A quick review)](accessibility-testing-a-quick-review.md)
 
 ## 🍫 API Testing <a href="#sqa-api-testing" id="sqa-api-testing"></a>
