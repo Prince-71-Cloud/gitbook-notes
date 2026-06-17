@@ -602,7 +602,6 @@ A flaky test sometimes passes and sometimes fails without a meaningful applicati
 <summary>Common Causes of Test Flakiness</summary>
 
 ```
-
 * Timing Issues: delays or race conditions
 * Dependency fluctuations: API or database inconsistencies
 * Environment instability: resource constraints or network issues
@@ -933,31 +932,7 @@ npx playwright test --update-snapshots
 
 ### 3.3 How do you capture a snapshot?
 
-<details>
-
-<summary>Original code preserved</summary>
-
-```ts
-import {test, expect} from “@playwright/test”
-import prettier from ‘prettier’
-
-async function sanitiseHTML(html: string): Promise<string>{
-const cleaned = html.replace(/_ngcontent-[^=]+=”[^”]*”/g, “”)
- const formatted = await prettier.format(cleaned, { parse: ‘html’, singleAttributePerLine: false })
-Return formatted
-}
-
-test (“snapshot of top menu”, async ({page}) => {
-await page.goto(“https://practicesoftwaretesting.com”)
-const html = await page.locator(“#navbarSupportContent”).innerHTML();
-const sanitiseHTML = await sanitiseHTML(html);
- expect(html).toMatchSnapshot(“top-menu.html”)
-})
-```
-
-</details>
-
-Corrected code:
+Code:
 
 ```ts
 import { test, expect } from '@playwright/test';
@@ -994,19 +969,7 @@ test('snapshot of top menu', async ({ page }) => {
 
 ***
 
-### 3.4 Challenge: implement a test to screenshot a page
-
-<details>
-
-<summary>Original section preserved</summary>
-
-```
-3.4 Challenge: Implement a test to screenshots a page
-```
-
-</details>
-
-Corrected heading:
+### 3.4 Challenge: implement a test to screenshot a pageCorrected heading:
 
 ```
 Challenge: Implement a test to screenshot a page
@@ -1029,16 +992,6 @@ test('homepage visual screenshot', async ({ page }) => {
 ***
 
 ### 3.5 Solution: implement a test to screenshot a page
-
-<details>
-
-<summary>Original section preserved</summary>
-
-```
-3.5 Solution: Implement a test to screenshot a page
-```
-
-</details>
 
 #### Full solution
 
@@ -1080,44 +1033,11 @@ export default defineConfig({
 
 ### 4.1 What is Microsoft Playwright Testing (MPT) service?
 
-<details>
-
-<summary>Original notes preserved</summary>
-
-```
-4.1 What is Microsoft Playwright Testing(MPT) service?
-* A cloud-based service for running Playwright tests at scale
-* Provides seamless integration with CI/CD pipelines
-* Ensures consistent test execution across environments
-```
-
-</details>
-
 #### Explanation
 
 Microsoft Playwright Testing and Playwright Workspaces is a cloud execution service for running Playwright tests on managed remote browsers.
 
 It helps teams scale test execution without maintaining their own browser infrastructure.
-
-<details>
-
-<summary>Original comparison preserved</summary>
-
-```
-Key Differences between MS playwright Framework vs MS playwright testing service:
-
-MS playwright Framework
-* A powerful open-source automation framework
-* Run tests locally or on self-managed infrastructure
-* Requires manual setup for parallel execution and scaling
-
-MS playwright testing service
-* A cloud-based test execution platform
-* Manages infrastructure automatically
-* Provides built-in parallel execution and debugging tools
-```
-
-</details>
 
 #### Polished comparison
 
@@ -1133,10 +1053,9 @@ MS playwright testing service
 
 <details>
 
-<summary>Original notes preserved</summary>
+<summary>Benefits of Using MPT</summary>
 
 ```
-Benefits of Using MPT
 * No need to maintain test infrastructure
 * Parallel test execution for faster feedback
 * Built-in debugging tools and logs
@@ -1148,14 +1067,12 @@ Benefits of Using MPT
 
 <details>
 
-<summary>Original notes preserved</summary>
+<summary>Who SHould use MPT</summary>
 
-```
-Who SHould use MPT
-* QA teams looking for scalable test execution
-* Developers who want instant feedback on test runs
+<pre><code><strong>* QA teams looking for scalable test execution
+</strong>* Developers who want instant feedback on test runs
 * CI/CD pipeline engineers automating deployment checks
-```
+</code></pre>
 
 </details>
 
